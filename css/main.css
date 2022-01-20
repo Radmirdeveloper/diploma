@@ -65,13 +65,13 @@ a {
     text-decoration: none;
 }
 .logo a{
-    margin-right: 244px;
+    margin-right: 235px;
 }
 
 .header #menu {
     display: flex;
     align-items: center;
-    margin-right: 140px;
+    margin-right: 130px;
 }
 
 .header #menu .menu-item {
