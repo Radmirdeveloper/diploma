@@ -1,5 +1,7 @@
 $(document).ready(() => {
-    let moreT =$('.client .more-t')
+    let moreT = $('#says .client .more-t')
+    let clientMoreActive = $('#says .client .more-t.active');
+    let client = $('#says .client');
     new WOW().init();
     $('.product-title').click((e) => {
         let currentElement = $(e.target);
@@ -8,90 +10,101 @@ $(document).ready(() => {
         $('#' + id).show();
         $('.product-title').removeClass('active')
         currentElement.addClass('active')
-        $('#' + id + ' .product').slick('refresh');
-        $('#' + id + ' #products-numbers').slick('refresh');
+        $('#' + id + ' .product-content').slick('refresh');
+        $('#products-numbers').slick('refresh')
+        $('.product').slick('refresh')
+        $('.useful-content.s').slick('refresh')
     });
-    $('.action .more-action').click((e) => {
+    $('#says .more-action').click((e) => {
         let more = $('#says .action .more-action');
         let moreActive = $('#says .action .more-action.active');
         let client = $('.client');
         more.hide();
         moreActive.show();
         client.addClass('active')
-        $(moreActive).click((e) => {
-            more.show();
-            moreActive.hide();
-            client.removeClass('active')
-        });
     });
-
-    $(moreT[0]).click((e) => {
+    $('#says .action .more-action.active').click((e) => {
+        let more = $('#says .action .more-action');
+        let moreActive = $('#says .action .more-action.active');
         let client = $('.client');
+        more.show();
+        moreActive.hide();
+        client.removeClass('active')
+    });
+    $(moreT[0]).click((e) => {
         if (e.target) {
             $(client[0]).addClass('active')
             $(moreT[0]).addClass('active')
         }
         $('.client .more-t.active').click((e) => {
-                if (e.target) {
-                    $(client[0]).removeClass('active')
-                    $(moreT[0]).removeClass('active')
-                }
+            if (e.target) {
+                $(client[0]).removeClass('active')
+                $(moreT[0]).removeClass('active')
+            }
         });
     });
     $(moreT[1]).click((e) => {
-        let client = $('.client');
         if (e.target) {
             $(client[1]).addClass('active')
             $(moreT[1]).addClass('active')
         }
         $('.client .more-t.active').click((e) => {
-                if (e.target) {
-                    $(client[1]).removeClass('active')
-                    $(moreT[1]).removeClass('active')
-                }
+            if (e.target) {
+                $(client[1]).removeClass('active')
+                $(moreT[1]).removeClass('active')
+            }
         });
     });
     $(moreT[2]).click((e) => {
-        let client = $('.client');
         if (e.target) {
             $(client[2]).addClass('active')
             $(moreT[2]).addClass('active')
         }
         $('.client .more-t.active').click((e) => {
-                if (e.target) {
-                    $(client[2]).removeClass('active')
-                    $(moreT[2]).removeClass('active')
-                }
+            if (e.target) {
+                $(client[2]).removeClass('active')
+                $(moreT[2]).removeClass('active')
+            }
         });
     });
-    $('#useful .more-action').click((e) => {
-        let more = $('#useful .action .more-action');
-        let moreActive = $('#useful .action .more-action.active');
+
+
+    $('.useful .more-action').click((e) => {
+        let more = $('.useful .action .more-action');
+        let moreActive = $('.useful .action .more-action.active');
         let client = $('.useful-item.s');
         more.hide();
         moreActive.show();
         client.addClass('active')
-        $(moreActive).click((e) => {
-            more.show();
-            moreActive.hide();
-            client.removeClass('active')
-        });
     });
+    $('.useful .action .more-action.active').click((e) => {
+        let more = $('.useful .action .more-action');
+        let moreActive = $('.useful .action .more-action.active');
+        let client = $('.useful-item.s');
+        more.show();
+        moreActive.hide();
+        client.removeClass('active')
+    });
+
     $('#form-content #forma .more-action').click((e) => {
         let more = $('#form-content #forma .more-action');
         let moreActive = $('#form-content #forma .more-action.active');
         let client = $('#form-content #forma #action-check');
         more.hide();
-        moreActive.show();
+        moreActive.css('display', 'flex');
         client.css('display', 'flex');
-        $(moreActive).click((e) => {
-            more.show();
-            moreActive.hide();
-            client.hide();
-        });
+
+    });
+    $('#form-content #forma .more-action.active').click((e) => {
+        let more = $('#form-content #forma .more-action');
+        let moreActive = $('#form-content #forma .more-action.active');
+        let client = $('#form-content #forma #action-check');
+        more.css('display', 'flex');
+        moreActive.hide();
+        client.css('display', 'none');
     });
     $('#all .product-content').slick({
-        slidesToShow: 3,
+        slidesToShow: 1,
         slidesToScroll: 1,
         arrows: true,
         infinite: true,
@@ -102,9 +115,9 @@ $(document).ready(() => {
         slidesToShow: 6,
         slidesToScroll: 1,
         asNavFor: '#all .product-content',
-        dots: false,
         centerMode: true,
         focusOnSelect: true,
+        dots: false
     });
 
     $('.useful-content.s').slick({
@@ -113,7 +126,8 @@ $(document).ready(() => {
         arrows: true,
         infinite: true,
         fade: true,
-        asNavFor: '.useful-numbers'
+        asNavFor: '.useful-numbers',
+        centerMode:true
     });
     $('.useful-numbers').slick({
         slidesToShow: 6,
@@ -122,7 +136,7 @@ $(document).ready(() => {
         dots: false,
         infinite: false,
         centerMode: true,
-        arrows:false,
+        arrows: false,
         focusOnSelect: true
     });
 
@@ -131,7 +145,8 @@ $(document).ready(() => {
             let phone = $('#telephone')
             let text = $('#text-area')
             let check = $('#action-check label input')
-            let mistake = $('.mistake')
+            let mistake = $('#forma .mistake')
+            let mistakeAction = $('#forma .mistake-action')
             let needValidation = $('.validation')
             let moreAction = $('#form-content #forma .more-action')
             mistake.hide()
@@ -150,21 +165,26 @@ $(document).ready(() => {
             for (let i = 0; i < check.length; i++) {
                 if (!check[i].checked) {
                     moreAction.css('border-color', 'red');
-                    $(mistake[2]).show();
+                    $(mistakeAction).show();
                 } else {
-                    $(mistake[2]).hide();
+                    $(mistakeAction).hide();
                     moreAction.css('border-color', 'rgb(148, 181, 194)')
                     if (name.val() && phone.val() && text.val()) {
                         $.ajax({
                             type: 'POST',
                             url: 'mail.php',
-                            data: 'name=' + name.val() + '&phone=' + phone.val() + '&check=' + $(check[i]).val() + '&text=' + text.val(),
+                            data: 'name=' + name.val() + '&phone=' + phone.val() + '&check=' + $(check).serialize() + '&text=' + text.val(),
                             success: () => {
                                 $('#thanks').css('display', 'flex');
                                 $('#form-content').hide();
                             },
                             error: () => {
-                                alert('Ошибка бронирования. Свяжитесь, пожалуйста, по номеру телефона.');
+                                $('#thanks').css('display', 'flex');
+                                $('#form-content').hide();
+                                console.log(name.val())
+                                console.log(phone.val())
+                                console.log($(check).serialize())
+                                console.log(text.val())
                             }
                         });
                     }
@@ -175,27 +195,37 @@ $(document).ready(() => {
     );
     $('#footer-container .col #follow-input .action.b').click(() => {
         let input = $('#footer-container .col #follow-input input');
-        let mistake = $('.col .mistake-footer')
+        let mistake = $('.col .mistake-footer');
+        let follow = $('#footer-container .col #follow-input');
+        let thanks = $('#footer-container .col .thanks')
+        thanks.hide()
         input.css('border-color', 'rgb(245, 188, 47)')
         mistake.hide()
         if (!input.val()) {
             mistake.show()
             input.css('border-color', 'red')
+        } else {
+            follow.hide()
+            thanks.css('display', 'flex')
         }
     });
     $('.header #burger svg').click(() => {
         $('.header #border-menu').show();
         $('.header #border-menu svg').show();
-        $('.header #close').css('display', 'block');
-        ;
-        $('.header #burger').css('display', 'none');
-        ;
+        $('.header #close-block').css('display', 'flex');
     });
-    $('.header  #close').click(() => {
+    $('.header  #close-block').click(() => {
         $('.header #border-menu').hide();
-        $('.header #close').css('display', 'none');
-        $('.header #burger').css('display', 'block');
-        ;
+        $('.header #close-block').css('display', 'none');
+    });
+    $('.header #menu .menu-item').click(()=>{
+        $('.header #border-menu').hide();
+        $('.header #close-block').css('display', 'none');
+    });
+
+    $('.header #menu #header-icon .icon-item').click(()=>{
+        $('.header #border-menu').hide();
+        $('.header #close-block').css('display', 'none');
     });
 
     $('.open-popup-link').magnificPopup({

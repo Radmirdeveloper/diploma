@@ -12,7 +12,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $content = $name . ' оставил заявку на товар ' . $check . ' с комментарием ' . $text . '. Его телефон: ' . $phone;
 
     // Первый параметр - кому отправляем письмо, второй - тема письма, третий - содержание
-    $success = mail("admin@mebelclub.com ", 'Заявка', $content);
+    $success = mail("admin@mebelclub.com", 'Заявка', $content);
 
     if ($success) {
         // Отдаем 200 код ответа на http запрос

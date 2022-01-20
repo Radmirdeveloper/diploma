@@ -16,75 +16,42 @@
 
     #main #main-icon {
         right: 30px;
+        top: 33%;
     }
 
-}
-
-/* 1138 - 1229 */
-@media screen and (max-width: 1229px) {
-    .header, #main #main-container, #about, #products, #says, .useful, #advantage, #footer-container, #form {
-        width: auto;
-        padding: 20px;
-    }
-
-    #form-content #forma .more-action, #form-content #forma .input-text, #form-content #forma .more-action, #form-content #text-area {
-        width: 100%;
-    }
-
-    #form-content #forma .more-action {
-        box-sizing: unset;
-    }
-
-    #form-content #forma #action-check {
-        padding: 15px;
-    }
-
-    #form-content #forma, #form-content, #form-content #forma #action-check {
-        width: 335px;
-    }
-
-    #form-content #action-check label {
-        font-size: 14px;
-        margin-right: 7px;
-    }
-
-    #form-content #forma .more-action img {
-        margin-left: 64px;
-    }
-
-    #form .more-action span {
-        margin-left: 0px;
-    }
-
-    #form {
-        justify-content: center;
-        position: relative;
-    }
-
-    #form #form-img {
-        position: absolute;
-        top: 0;
-        left: -260px;
-        z-index: -1;
-        width: 50%;
-    }
-
-    #form #form-img img {
-        width: 100%;
-    }
-
-    #products #line {
-        position: relative;
-        left: 43%;
-        bottom: 28px;
-    }
 }
 
 /* 768 - 1023 */
 @media screen and (max-width: 1233px) {
-    #all .product, #all .product #one {
+    #footer-container > * {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    #says .clients {
+        width: 1110px;
+        justify-content: center;
+        margin: 0 auto;
+    }
+
+    #scroll {
+        overflow: scroll;
+    }
+
+    #says .client {
+        margin-right: 20px;
+    }
+
+    #says .client:last-child {
+        margin-right: 0;
+    }
+
+    #all .product-content .product:first-child, #all .product-content .product:first-child #one {
         column-gap: 10px;
-        left: 6% !important;
+        row-gap: 30px;
+    }
+
+    #all .product-content .product:first-child {
         row-gap: 40px;
     }
 
@@ -92,11 +59,51 @@
         width: 250px;
     }
 
+    #all .product-content .product:first-child {
+        justify-content: center;
+    }
+
+    #soft .product-content, #all .product-content .product.s, .product.slick-slide.slick-current.slick-active, #all .product-content .product.f img, .slick-initialized .slick-slide {
+        height: 442px;
+    }
+
+    #bed .product-content img, #table .product-content img, #decor .product-content img, #all .product-content .product.b img, #all .product-content .product.t img, #all .product-content .product.d img {
+        width: 290px;
+        height: 210px;
+    }
+
+    .product.slick-slide.slick-current.slick-active {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #all .product-content .product.f img, #furnit .product-content img {
+        margin-right: 10px;
+        max-width: 370px;
+    }
+
+    .product.slick-slide img, #soft .product-content img, #all .product-content .product.s img {
+        max-width: 300px;
+        max-height: 442px;
+    }
+
+    #decor .product-content img:last-child {
+        width: 400px;
+        height: 439px;
+    }
+
+    .product.slick-slide img {
+        max-width: 300px;
+        max-height: 442px;
+    }
+
+
     #products #products-title-item {
         margin: 40px auto 48px auto;
     }
 
-    #products .title {
+    #products .title, #furnit .product-content {
         display: flex;
         justify-content: center;
     }
@@ -119,27 +126,132 @@
         top: -18px;
         right: -13px;
     }
+
+    #footer-num {
+        width: 305px;
+    }
 }
+
+/* 1138 - 1229 */
+@media screen and (max-width: 1229px) {
+    .logo a {
+        margin-right: 0;
+    }
+
+    .header #menu .menu-item:last-child {
+        padding-right: 0;
+    }
+
+    .header #menu {
+        margin-right: 0;
+    }
+
+
+    #advantage .advantage-item-image .blue:last-child {
+        top: 20px;
+        right: 280px;
+    }
+
+    #advantage .advantage-item-image .blue {
+        top: -28px;
+        right: -25px;
+        width: 50%;
+    }
+
+    .header {
+        justify-content: space-between;
+    }
+
+    .header, #main #main-container, #about, #products, #says, .useful, #footer-container, #form {
+        width: auto;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    #advantage {
+        width: 890px;
+        padding-top: 100px;
+    }
+
+    #form-content #forma .more-action, #form-content #forma .input-text, #form-content #forma .more-action, #form-content #text-area {
+        width: 100%;
+    }
+
+    #form-content #forma .more-action {
+        box-sizing: border-box;
+    }
+
+    #form-content #forma #action-check {
+        padding: 15px;
+    }
+
+    #form-content #forma, #form-content, #form-content #forma #action-check {
+        width: 385px;
+    }
+
+    #form-content #action-check label {
+        font-size: 14px;
+        margin-right: 7px;
+    }
+
+    #form-content #forma .more-action img {
+        margin-left: 64px;
+    }
+
+    #form .more-action span {
+        margin-left: 0px;
+    }
+
+    #form {
+        justify-content: center;
+        position: relative;
+    }
+
+    #form #form-img {
+        position: absolute;
+        top: -15px;
+        left: -260px;
+        z-index: -1;
+        width: 50%;
+    }
+
+    #form #form-img img {
+        width: 100%;
+    }
+
+    #products #line {
+        position: relative;
+        left: 43%;
+        bottom: 28px;
+    }
+
+    #advantage .advantage-item-image .blue {
+        height: 250px;
+    }
+
+    .blue:last-child {
+        top: 23px;
+        right: 280px;
+    }
+}
+
 
 /* 768 - 1023 */
 @media screen and (max-width: 1080px) {
     .slick-prev.slick-arrow {
-        left: 248px;
+        left: 215px;
     }
 
     .slick-next.slick-arrow {
-        right: 270px;
+        right: 215px;
     }
 
     #says .clients {
         justify-content: center;
-        flex-wrap: wrap;
+        margin: 0px;
+        margin-left: 15px;
     }
 
-    #says .client {
-        margin-left: 20px;
-        margin-top: 20px;
-    }
 
     #about #about-images {
         justify-content: space-between;
@@ -187,6 +299,47 @@
         justify-content: space-around;
     }
 
+    .useful-content .useful-item-text .text-bold {
+        margin-bottom: 18px;
+    }
+
+    .useful-content .useful-item-img img {
+        width: 486px;
+        height: 250px;
+    }
+
+    .useful-content .useful-item-text {
+        margin-top: 0;
+        padding: 30px;
+    }
+
+    #advantage .advantage-item-image .blue {
+        width: 50%;
+        height: 100%;
+        top: -28px;
+        right: -4%;
+    }
+
+    #advantage .advantage-item-image .blue:last-child {
+        top: 13px;
+        right: 54%;
+    }
+}
+
+@media screen and (max-width: 971px) {
+    #about #about-images .about-image {
+        width: 400px;
+    }
+
+    #about #about-images .about-image img {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 924px) {
+    #advantage .advantage-item-image .blue {
+        top: -25px;
+    }
 }
 
 @media screen and (max-width: 920px) {
@@ -218,8 +371,8 @@
 
     #about #about-images .about-image #images-text {
         font-size: 22px;
-        left: 7%;
-        width: 363px;
+        left: 5%;
+        width: 90%;
     }
 
     #all .product #five {
@@ -265,10 +418,17 @@
 }
 
 /* 425 - 767 */
-@media screen and (max-width: 870px) {
+@media screen and (max-width: 900px) {
     .useful-content .useful-item {
         flex-direction: column;
         width: 488px;
+    }
+
+    #advantage .advantage-item .text-item .text-bold .number-text-item {
+        font-size: 251px;
+        color: #f3e8ce;
+        top: -76px;
+        left: -127px;
     }
 
     #form #form-img {
@@ -306,8 +466,12 @@
         display: block;
     }
 
+    #says .layer.f .more-t {
+        display: flex;
+        justify-content: end;
+    }
+
     #says .more-t {
-        text-align: end;
         margin-top: 20px;
     }
 
@@ -326,6 +490,21 @@
     .slick-prev.slick-arrow {
         left: 106px;
     }
+
+    #all .product-content .product.d, #soft .product-content, #all .product-content .product.s, .product.slick-slide.slick-current.slick-active, #all .product-content .product.f img, .slick-initialized .slick-slide {
+        height: 350px;
+    }
+
+    #decor .product-content img:last-child, .product.slick-slide img, #soft .product-content img, #all .product-content .product.s img {
+        max-width: 248px;
+        max-height: 370px;
+    }
+
+    #bed .product-content img, #table .product-content img, #decor .product-content img, #all .product-content .product.b img, #all .product-content .product.t img, #all .product-content .product.d img {
+        width: 293px;
+        height: 175px;
+    }
+
 }
 
 @media screen and (max-width: 826px) {
@@ -348,12 +527,18 @@
         display: flex;
         justify-content: space-around;
         flex-wrap: wrap;
-        padding: 50px 0 450px;
+        padding: 50px 20px 450px 20px;
+        width: 680px;
     }
 
     #about #about-text {
         width: 408px;
         text-align: center;
+    }
+
+    #advantage {
+        padding-left: 20px;
+        padding-right: 20px;
     }
 
     #about .content-text:last-child {
@@ -373,19 +558,20 @@
     #about #about-images .about-image:first-child {
         display: block;
         position: absolute;
-        top: 213%;
+        top: 254%;
         left: 7%;
         width: 271px;
     }
 
     #advantage {
-        padding-top: 80px;
+        padding-top: 120px;
+        width: auto;
     }
 
     #about .blue {
         width: 268px;
         height: 209px;
-        top: 218%;
+        top: 232%;
         right: 9%;
     }
 
@@ -405,32 +591,13 @@
         margin: 73px 0 0 0;
     }
 
-    #advantage .advantage-item .text-item .text-bold .number-text-item {
-        font-size: 251px;
-        color: #f3e8ce;
-        top: -65px;
-        left: 282px;
-    }
 
     #all .product {
         align-self: start;
     }
-}
 
-/* 425 - 767 */
-@media screen and (max-width: 785px) {
     .header #burger {
         display: block;
-    }
-
-    .header #burger svg {
-        display: block;
-        width: 50px;
-        height: 50px;
-    }
-
-    #main #main-icon {
-        display: none;
     }
 
     .header #menu {
@@ -474,6 +641,89 @@
         padding: 15px;
     }
 
+    .header #menu #header-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #main #main-icon {
+        display: none;
+    }
+
+    #close-block {
+        right: 20px;
+        position: absolute;
+        top: 20px;
+        height: 50px;
+        width: 50px;
+        background: white;
+        z-index: 50;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .header #menu #header-icon {
+        margin-top: 25px;
+    }
+
+    .header #menu #header-icon svg {
+        position: relative;
+        top: 0;
+        left: 0;
+    }
+
+    .header #menu #header-icon .icon-item:last-child {
+        margin-right: 0;
+    }
+
+    .header #menu #header-icon .icon-item {
+        margin-top: 0;
+    }
+
+    #main-container #main-content {
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    #main-container #main-content .action {
+        margin: 30px auto 0 auto;
+    }
+}
+
+/* 425 - 767 */
+@media screen and (max-width: 785px) {
+
+    #all .product-content .product.d, #soft .product-content, #all .product-content .product.s, .product.slick-slide.slick-current.slick-active, #all .product-content .product.f img, .slick-initialized .slick-slide {
+        height: 460px;
+    }
+
+    #bed .product-content img, #table .product-content img, #decor .product-content img, #all .product-content .product.b img, #all .product-content .product.t img, #all .product-content .product.d img {
+        width: 289px;
+        height: 218px;
+    }
+
+    .header #burger svg {
+        display: block;
+        width: 50px;
+        height: 50px;
+    }
+
+    #all .product #one img {
+        max-width: 310px;
+    }
+
+    #decor .product-content img:last-child, .product.slick-slide img, #soft .product-content img, #all .product-content .product.s img {
+        max-height: 423px;
+    }
+
+    #decor .product-content img:last-child, #all .product-content .product.d img:last-child {
+        grid-column: 1/2;
+        grid-row: 1/3;
+        width: 400px;
+        height: 415px;
+    }
+
     #all .product #one img {
         width: 321px;
     }
@@ -512,7 +762,7 @@
     }
 
     .slick-next.slick-arrow, .slick-prev.slick-arrow {
-        top: 538px;
+        top: 530px;
     }
 
     #products #products-title-item {
@@ -536,14 +786,16 @@
         margin: 0 auto;
     }
 
+    #about {
+        width: auto;
+    }
+
     #about .blue {
-        height: 236px;
-        top: 220%;
+        height: 190px;
         right: 10%;
     }
 
     #about #about-images .about-image:first-child {
-        top: 218%;
         left: 7%;
         width: 271px;
     }
@@ -560,15 +812,101 @@
         width: 100%;
         height: 100%;
     }
-    #main-container #main-content{
+
+    #main-container #main-content {
         opacity: 0.9;
+    }
+
+    #decor .product-content img:last-child, #all .product-content .product.d img:last-child {
+        max-height: 460px;
+        height: 460px;
+        width: 300px;
+        max-width: 300px;
+    }
+
+    #furnit .product-content img, #furnit .product-content img:last-child {
+        width: 290px;
+        height: 250px;
+    }
+
+    #decor .product-content img {
+        width: 250px;
+        height: 190px;
+    }
+
+    #bed .product-content img, #table .product-content img {
+        width: 250px;
+        height: 200px;
+    }
+
+    #thanks {
+        position: relative;
+        top: 0;
+        left: 0;
+    }
+
+    #decor .product-content img:last-child {
+        height: 400px;
+        width: 290px;
     }
 }
 
+@media screen and (max-width: 700px) {
+    #footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #footer-container > * {
+        margin: 20px auto;
+    }
+
+}
 
 @media screen and (max-width: 657px) {
+
+    #advantage .advantage-item .text-item .text-bold .number-text-item {
+        font-size: 251px;
+        color: #f3e8ce;
+        top: -65px;
+        left: 282px;
+        z-index: -1;
+    }
+
+    #all .product-content .product.d, #soft .product-content, #all .product-content .product.s, .product.slick-slide.slick-current.slick-active, #all .product-content .product.f img, .slick-initialized .slick-slide {
+        height: 390px;
+    }
+
+    #soft .product-content img:first-child {
+        height: 370px;
+    }
+
+    #products .slick-next.slick-arrow, #products  .slick-prev.slick-arrow {
+        display: none !important;
+    }
+
+    #products .product-content .product.slick-slide {
+        display: none;
+    }
+
+    #products .product-content .product.slick-slide.slick-current.slick-active {
+        display: grid;
+    }
+
+    #soft .product-content img {
+        max-height: none !important;
+    }
+
+    #all .products-numbers {
+        display: none;
+    }
+
+    #all .product-content .product.d, #soft .product-content, #all .product-content .product.s, .product.slick-slide.slick-current.slick-active, #all .product-content .product.f img, .slick-initialized .slick-slide {
+        height: auto;
+    !important;
+    }
+
     #products #products-title-item {
-        flex-wrap: wrap;
         justify-content: space-around;
         margin: 20px auto 48px auto;
     }
@@ -637,18 +975,155 @@
         font-size: 28px;
         top: -7px;
     }
-    .useful-content .useful-item,.useful-content .useful-item-img,.useful-content .useful-item-img img,.useful-content .useful-item-text{
+
+    .useful-item.slick-slide.slick-current.slick-active {
         width: 100%;
         box-sizing: border-box;
+    }
+
+
+    #products-container {
+        width: 610px;
+        box-sizing: border-box;
+        position: relative;
+        z-index: 999;
+    }
+    .product-content.slick-initialized.slick-slider{
+        z-index: -1;
+    }
+
+    #products {
+        overflow: scroll;
+    }
+
+    #products #products-title-item .product-title, #products #products-title-item .product-title.active {
+        margin: 0;
+    }
+
+    #products .slick-slider .slick-track,  #products .slick-slider .slick-list {
+        position: relative;
+        z-index: -1;
+    }
+
+    #scroll {
+        z-index: 500;
+        position: relative;
+        overflow: scroll;
+    }
+
+    #scroll > * {
+        width: 610px;
+        box-sizing: border-box;
+    }
+
+    #says .layer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #says .layer .row {
+        width:auto;
+        margin-left: 0;
+        margin-top: 10px;
+    }
+    .layer .row .data {
+       display: none;
     }
 
 }
 
 @media screen and (max-width: 547px) {
+    .useful-content .useful-item{
+        width: 100%;
+        box-sizing: border-box;
+    }
+    .useful-content .useful-item-img  {
+        width: 100%;
+        height: auto;
+        box-sizing: border-box;
+    }
+    .useful-content .useful-item-img img {
+        width: 100%;
+
+    }
+    #says .layer {
+        flex-direction: column;
+        text-align: center;
+    }
+    #advantage .title{
+        margin-bottom: 0;
+    }
+    #says .content-text.s{
+        font-size: 15px;
+        width: 193px;
+    }
+    #advantage .advantage-item .text-item{
+        margin: 35px 0 0 0;
+    }
+    #advantage {
+        padding-top: 150px;
+    }
+    #products {
+        padding: 40px 20px 0 20px;
+    }
+    .useful .title {
+        margin-bottom: 35px;
+    }
+    #form-content #forma #action-check {
+        box-sizing: border-box;
+        padding: 5px;
+        width: 100%;
+        height: 167px;
+    }
+    #form {
+        justify-content: center;
+        position: relative;
+        margin-left: 20px;
+        margin-right: 20px;
+        padding: 0;
+    }
+    #form-content .content-text{
+        margin: 30px auto;
+        width: 100%;
+    }
+    #form-content #action-check label{
+        margin-right: 0;
+    }
+    #footer-container .col #footer-num{
+        margin: 0 auto;
+    }
+    #says{
+        padding-top: 85px;
+    }
+    #hide{
+        display: none;
+    }
+    #about{
+        padding: 85px 20px 450px 20px;
+    }
+    #says .client.active .content-text.s{
+        height: 512px;
+    }
+    #says .clients{
+        margin-left: 0;
+        justify-content: start;
+    }
+    #says .layer .row {
+        width: 182px;
+    }
+
+    #footer-img {
+        justify-content: center;
+    }
+
     .slick-prev.slick-arrow {
         left: 65px;
     }
 
+    #main-container #main-content {
+        width: 100%;
+        box-sizing: border-box;
+    }
     #footer-container .col #follow-input {
         display: block;
         width: 100%;
@@ -681,6 +1156,9 @@
     #footer-container .col #footer-num span {
         margin-right: 0;
         margin-top: 5px;
+    }
+    #footer-num{
+        width: auto;
     }
 
     #footer-container .col {
@@ -721,6 +1199,10 @@
         font-size: 20px;
     }
 
+    #about #about-images .about-image #images-text {
+        text-align: center;
+    }
+
     .header #burger svg, .header #menu svg {
         width: 30px;
         height: 30px;
@@ -739,59 +1221,60 @@
         width: 100%;
         box-sizing: border-box;
     }
+    #form-content #forma .more-action{
+        font-size: 15px;
+    }
+
+
     #form-content {
         text-align: center;
     }
+
     .action {
         font-size: 18px;
     }
-    #says .layer.f{
+
+    #says .layer.f {
         margin-bottom: 30px;
     }
 
 }
 
 @media screen and (max-width: 499px) {
-
-
+    .useful-content .useful-item {
+        width: 100%;
+        box-sizing: border-box;
+    }
+    .useful {
+        padding: 85px 20px 85px 20px;
+    }
+    .useful-content.s.slick-initialized.slick-slider .slick-slider .slick-track{
+        height: 555px;
+    }
     #main #main-icon {
         right: 30px;
         display: none;
+    }
+    #useful-container-numbers{
+        width: 160px;
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+        position: relative;
+        top: -50px;
     }
 
 
     #main-container #main-content {
         background-color: #94b5c2;
         padding: 53px 59px;
-        width: 230px;
         text-align: center;
         margin: 0 auto;
     }
-
-
-    #all .product #three, #all .product #four {
-        width: 120px;
+    #useful-container-numbers .slick-slider .slick-track, .slick-slider .slick-list{
+        transform:none!important;
     }
 
-    #all .product #three {
-        height: 63px;
-    }
-
-    #all .product #four {
-        height: 189px;
-    }
-
-    #all .product #five img {
-        width: 80px;
-    }
-
-    #all .product #one img {
-        width: 169px;
-    }
-
-    .slick-next.slick-arrow, .slick-prev.slick-arrow {
-        top: 349px;
-    }
 
     #hover {
         font-size: 10px;
@@ -804,137 +1287,219 @@
     #says .more-t {
         margin-top: 35px;
     }
-    .useful{
+
+    .useful {
         display: none;
     }
     .useful.s{
         display: block;
     }
-    .useful .slick-prev, .useful .slick-next{
-        z-index: 500;
-        top: 635px;
-    }
-    .useful .slick-prev.slick-arrow{
-        left: 137px;
-    }
-    .useful .slick-next.slick-arrow{
-        right: 137px;
+    .useful-content.s .slick-initialized.slick-slider {
+        display: block;
     }
 
+
+    .useful .slick-prev, .useful .slick-next {
+        z-index: 500;
+        top: 93%;
+    }
+
+    .useful .slick-prev.slick-arrow {
+        left: 137px;
+    }
+
+    .useful .slick-next.slick-arrow {
+        right: 137px;
+    }
+    .useful-content.slick-slider{
+        display: block;
+    }
+    .useful-content .useful-item-img{
+        width: 100%;
+        height: 250px;
+        box-sizing: border-box;
+    }
+    .useful-content .useful-item-img img {
+        width: 100%;
+
+    }
 
 }
 
 /* 320 - 374 */
 @media screen and (max-width: 425px) {
-    .useful .title{
+    .useful .title {
         text-align: center;
     }
+
+    #about #about-images .about-image #images-text {
+        font-size: 20px;
+        left: 20px;
+        top: 20%;
+    }
+
     .logo, .logo a, .header #number {
         font-size: 20px;
     }
-    .useful .slick-prev, .useful .slick-next{
-        top: 583px;
-    }
-    .useful .slick-prev.slick-arrow{
+
+
+
+    .useful .slick-prev.slick-arrow {
         left: 134px;
     }
-    .useful .slick-next.slick-arrow{
+
+    .useful .slick-next.slick-arrow {
         right: 124px;
     }
-    #says .content-text.s{
+    .client-img img{
+        width: 80px;
+        height: 80px;
+    }
+    #says .content-text.s {
+        width: 180px;
+        box-sizing: border-box;
+    }
+
+    #about #about-text, #about #about-images .about-image, #about .content-text.s, #advantage .advantage-item .text-item {
         width: 100%;
         box-sizing: border-box;
     }
-    #about #about-text,#about #about-images .about-image,#about .content-text.s,#advantage .advantage-item .text-item{
-        width: 100%;
-        box-sizing: border-box;
-    }
-    #advantage .advantage-item .text-item .text-bold .number-text-item{
+
+    #advantage .advantage-item .text-item .text-bold .number-text-item {
         z-index: -1;
         font-size: 319px;
         top: -133px;
     }
-    .slick-slide img{
+
+    .slick-slide img {
         display: inline;
     }
-    #about #about-images .about-image #images-text {
-        font-size: 22px;
-        left: 4px;
-        width: 100%;
-    }
-    .useful-content .useful-item{
+
+
+    .useful-content .useful-item {
         margin-bottom: 0;
     }
+
     .useful .slick-next.slick-arrow {
         right: 105px;
     }
+
     .useful .slick-prev.slick-arrow {
         left: 117px;
     }
-    .useful .title{
-        margin-bottom: 0;
+
+    .useful .title {
+        margin-bottom: 30px;
     }
-    #main-container #main-content{
+
+    #main-container #main-content {
         padding: 34px;
     }
-    #form-content #forma .more-action img{
-       margin-left: 23px;
+
+    #form-content #forma .more-action img {
+        margin-left: 23px;
+    }
+    .useful-content .useful-item-img{
+        height: 200px;
+    }
+    .useful-content .useful-item-img img{
+        height: 100%;
+    }
+    #useful-container-numbers {
+        top: 5px;
+    }
+    .useful .slick-prev, .useful .slick-next {
+        top: 103%;
     }
 }
 
 
 /* 320 - 374 */
+@media screen and (max-width: 410px) {
+    #about #about-images .about-image #images-text {
+        width: 90%;
+        box-sizing: border-box;
+        left: 15px;
+    }
+    #about #about-images .about-image:first-child {
+        left: 0%;
+        width: 271px;
+        top: 269%;
+    }
+    #about .blue {
+        right: 3%;
+    }
+}
 @media screen and (max-width: 374px) {
-    #says .client{
+    #about #about-images .about-image:last-child img {
+        width: 100%;
+        height: 100%;
+    }
+    #about #about-images .about-image #images-text {
+        width: 88%;
+    }
+    #about #about-images .about-image #images-text {
+        top: 13%;
+    }
+    #about #about-images .about-image:first-child {
+        left: -8%;
+        width: 271px;
+        top: 248%;
+    }
+    #about .blue {
+        right: -4%;
+    }
+    #says .client {
         margin-left: 0;
     }
+
     #says .layer .row {
-        width: 100px;
+        width: auto;
     }
-    #all .product #four{
-        height: 160px;
-    }
-    #all .product #three, #all .product #four {
-        width: 88px;
-    }
-    #all .product #three{
-        height: 52px;
-    }
-    #all .product #five img {
-        width: 64px;
-    }
-    #all .product #one img {
-        width: 140px;
-    }
-    #all .product {
-        row-gap: 11px;
-    }
-    #all .product #one{
-        row-gap: 25px;
-    }
-    .slick-next.slick-arrow, .slick-prev.slick-arrow {
-        top: 295px;
-    }
+
+
+
+
     .slick-prev.slick-arrow {
         left: 30px;
     }
+
     .slick-next.slick-arrow {
         right: 25px;
     }
+
     .useful .slick-next.slick-arrow {
         right: 80px;
     }
+
     .useful .slick-prev.slick-arrow {
         left: 90px;
     }
-    .useful .slick-prev, .useful .slick-next{
-        top: 603px;
-    }
-    #main-container #main-content{
+
+
+
+    #main-container #main-content {
         width: 100%;
         box-sizing: border-box;
     }
+
     #about #about-images .about-image {
         height: 267px;
     }
+   .about-image #last{
+        height: 100%;
+    }
+    #advantage .advantage-item .text-item .text-bold .number-text-item {
+        left: 256px;
+    }
+    #products .product-content .product.slick-slide.slick-current.slick-active {
+        justify-content: start;
+    }
 }
+@media screen and (max-width: 340px) {
+    #about .blue {
+        top: 234%;
+    }
+}
+
+
