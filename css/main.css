@@ -71,7 +71,7 @@ a {
 .header #menu {
     display: flex;
     align-items: center;
-    margin-right: 130px;
+    margin-right: 127px;
 }
 
 .header #menu .menu-item {
@@ -82,7 +82,7 @@ a {
     padding-right: 40px;
 }
 
-.header #menu .menu-item:last-child {
+.header #menu a.menu-item:last-child {
     padding-right: 0;
 }
 .useful-content .useful-item .more-t{
