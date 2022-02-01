@@ -1,6 +1,6 @@
 $(document).ready(() => {
     let moreT = $('#says .client .more-t')
-    let clientMoreActive = $('#says .client .more-t.active');
+    let clientMoreActive = $('.client .close-button');
     let client = $('#says .client');
     new WOW().init();
     $('.product-title').click((e) => {
@@ -19,54 +19,117 @@ $(document).ready(() => {
         let more = $('#says .action .more-action');
         let moreActive = $('#says .action .more-action.active');
         let client = $('.client');
+        let clientHide = $('.client.hide')
         more.hide();
         moreActive.show();
         client.addClass('active')
+        clientHide.show()
     });
     $('#says .action .more-action.active').click((e) => {
         let more = $('#says .action .more-action');
         let moreActive = $('#says .action .more-action.active');
         let client = $('.client');
+        let clientHide = $('.client.hide')
         more.show();
         moreActive.hide();
         client.removeClass('active')
+        clientHide.hide()
     });
-    $(moreT[0]).click((e) => {
-        if (e.target) {
-            $(client[0]).addClass('active')
-            $(moreT[0]).addClass('active')
-        }
-        $('.client .more-t.active').click((e) => {
+    /*   $(moreT[0]).click((e) => {
+           if (e.target) {
+               $(client[0]).addClass('active')
+               $(moreT[0]).addClass('active')
+           }
+           $('.client .more-t.active').click((e) => {
+               if (e.target) {
+                   $(client[0]).removeClass('active')
+                   $(moreT[0]).removeClass('active')
+               }
+           });
+       });
+       $(moreT[1]).click((e) => {
+           if (e.target) {
+               $(client[1]).addClass('active')
+               $(moreT[1]).addClass('active')
+           }
+           $('.client .more-t.active').click((e) => {
+               if (e.target) {
+                   $(client[1]).removeClass('active')
+                   $(moreT[1]).removeClass('active')
+               }
+           });
+       });
+       $(moreT[2]).click((e) => {
+           if (e.target) {
+               $(client[2]).addClass('active')
+               $(moreT[2]).addClass('active')
+           }
+           $('.client .more-t.active').click((e) => {
+               if (e.target) {
+                   $(client[2]).removeClass('active')
+                   $(moreT[2]).removeClass('active')
+               }
+           });
+       });
+       $(moreT[3]).click((e) => {
+           if (e.target) {
+               $(client[3]).addClass('active')
+               $(moreT[3]).addClass('active')
+           }
+           $('.client .more-t.active').click((e) => {
+               if (e.target) {
+                   $(client[3]).removeClass('active')
+                   $(moreT[3]).removeClass('active')
+               }
+           });
+       });
+       $(moreT[4]).click((e) => {
+           if (e.target) {
+               $(client[4]).addClass('active')
+               $(moreT[4]).addClass('active')
+           }
+           $('.client .more-t.active').click((e) => {
+               if (e.target) {
+                   $(client[4]).removeClass('active')
+                   $(moreT[4]).removeClass('active')
+               }
+           });
+       });
+       $(moreT[5]).click((e) => {
+           if (e.target) {
+               $(client[5]).addClass('active')
+               $(moreT[5]).addClass('active')
+           }
+           $('.client .more-t.active').click((e) => {
+               if (e.target) {
+                   $(client[5]).removeClass('active')
+                   $(moreT[5]).removeClass('active')
+               }
+           });
+       });*/
+    for (let i = 0; i < moreT.length; i++) {
+        $(moreT[i]).click((e) => {
             if (e.target) {
-                $(client[0]).removeClass('active')
-                $(moreT[0]).removeClass('active')
+                $(moreT[i]).hide()
+                $(client[i]).addClass('active')
+                $(clientMoreActive[i]).show()
+                e.preventDefault()
             }
         });
-    });
-    $(moreT[1]).click((e) => {
-        if (e.target) {
-            $(client[1]).addClass('active')
-            $(moreT[1]).addClass('active')
-        }
-        $('.client .more-t.active').click((e) => {
+    }
+
+
+    for (let i = 0; i < moreT.length; i++) {
+        $(clientMoreActive[i]).click((e) => {
             if (e.target) {
-                $(client[1]).removeClass('active')
-                $(moreT[1]).removeClass('active')
+                $(moreT[i]).show()
+                $(clientMoreActive[i]).hide()
+                $(client[i]).removeClass('active')
+                e.preventDefault()
             }
         });
-    });
-    $(moreT[2]).click((e) => {
-        if (e.target) {
-            $(client[2]).addClass('active')
-            $(moreT[2]).addClass('active')
-        }
-        $('.client .more-t.active').click((e) => {
-            if (e.target) {
-                $(client[2]).removeClass('active')
-                $(moreT[2]).removeClass('active')
-            }
-        });
-    });
+    }
+
 
 
     $('.useful .more-action').click((e) => {
@@ -120,6 +183,88 @@ $(document).ready(() => {
         dots: false
     });
 
+    $('#soft .product-content').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: true,
+        infinite: true,
+        fade: true,
+        asNavFor: '#soft .products-numbers'
+    });
+    $('#soft .products-numbers').slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        asNavFor: '#soft .product-content',
+        centerMode: true,
+        focusOnSelect: true,
+        dots: false
+    });
+    $('#bed .product-content').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: true,
+        infinite: true,
+        fade: true,
+        asNavFor: '#bed .products-numbers'
+    });
+    $('#bed .products-numbers').slick({
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        asNavFor: '#bed .product-content',
+        centerMode: true,
+        focusOnSelect: true,
+        dots: false
+    });
+
+    $('#furnit .product-content').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: true,
+        infinite: true,
+        fade: true,
+        asNavFor: '#furnit .products-numbers'
+    });
+    $('#furnit .products-numbers').slick({
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        asNavFor: '#furnit .product-content',
+        centerMode: true,
+        focusOnSelect: true,
+        dots: false
+    });
+    $('#table .product-content').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: true,
+        infinite: true,
+        fade: true,
+        asNavFor: '#table .products-numbers'
+    });
+    $('#table .products-numbers').slick({
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        asNavFor: '#table .product-content',
+        centerMode: true,
+        focusOnSelect: true,
+        dots: false
+    });
+    $('#decor .product-content').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: true,
+        infinite: true,
+        fade: true,
+        asNavFor: '#decor .products-numbers'
+    });
+    $('#decor .products-numbers').slick({
+        slidesToShow: 6,
+        slidesToScroll: 1,
+        asNavFor: '#decor .product-content',
+        centerMode: true,
+        focusOnSelect: true,
+        dots: false
+    });
+
     $('.useful-content.s').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
@@ -127,7 +272,7 @@ $(document).ready(() => {
         infinite: true,
         fade: true,
         asNavFor: '.useful-numbers',
-        centerMode:true
+        centerMode: true
     });
     $('.useful-numbers').slick({
         slidesToShow: 6,
@@ -210,23 +355,19 @@ $(document).ready(() => {
         }
     });
     $('.header #burger svg').click(() => {
-        $('.header #border-menu').show();
+        $('.header #burger-menu').addClass('active');
         $('.header #border-menu svg').show();
         $('.header #close-block').css('display', 'flex');
     });
     $('.header  #close-block').click(() => {
-        $('.header #border-menu').hide();
+        $('.header #burger-menu').removeClass('active');
         $('.header #close-block').css('display', 'none');
     });
-    $('.header #menu .menu-item').click(()=>{
-        $('.header #border-menu').hide();
+    $('.header #burger-menu').click(() => {
+        $('.header #burger-menu').removeClass('active');
         $('.header #close-block').css('display', 'none');
     });
 
-    $('.header #menu #header-icon .icon-item').click(()=>{
-        $('.header #border-menu').hide();
-        $('.header #close-block').css('display', 'none');
-    });
 
     $('.open-popup-link').magnificPopup({
         type: 'inline',
