@@ -557,6 +557,9 @@
     #about #about-text {
         width: 462px;
     }
+    #about #about-bg {
+        left: 56%;
+    }
 }
 
 @media screen and (max-width: 826px) {
