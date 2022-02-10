@@ -1,3 +1,8 @@
+@media screen and (max-width: 1492px) {
+    #main-icon {
+        right: -60px;
+    }
+}
 @media screen and (max-width: 1380px) {
     #main {
         background-image: url("../images/main-bg.png");
@@ -21,6 +26,17 @@
 
 }
 
+/* 768 - 1023 */
+@media screen and (max-width: 1264px) {
+    #advantage .advantage-item-image .blue {
+        right: -20px;
+    }
+}
+@media screen and (max-width: 1236px) {
+    #advantage .advantage-item-image .blue {
+        right: -17px;
+    }
+}
 /* 768 - 1023 */
 @media screen and (max-width: 1233px) {
     #footer-container > * {

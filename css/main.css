@@ -100,6 +100,7 @@ a {
 
 #main {
     background: #ffff;
+    overflow: hidden
 }
 
 #main-bg {
@@ -431,10 +432,6 @@ a {
     position: relative;
 }
 
-.product .four img {
-    width: 100%;
-    height: 100%;
-}
 
 .product .one .duke, .product .one .lazur, .product .three {
     width: 360px;
@@ -442,9 +439,10 @@ a {
     position: relative;
 }
 
-.product .one .duke img, .product .one .lazur img, .product .three img {
+.product .one .duke img, .product .one .lazur img, .product .three img, .product .four img {
     width: 100%;
     height: 100%;
+    object-fit: cover
 }
 
 .product .five .proteya, .product .five .carlon {
